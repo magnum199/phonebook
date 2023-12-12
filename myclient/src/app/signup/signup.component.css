@@ -1,0 +1,32 @@
+input {
+    width: 300px;
+    margin: 10px;
+    
+    
+}
+#formdiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form-group {
+    margin-left: 560px;
+    color: white;
+}
+.maintitle {
+    color: white;
+    text-align: center;
+    font-family:'Courier New', Courier, monospace ;
+    
+}
+.mymenu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+.signuplink {
+    color: green;
+    cursor: pointer;
+}

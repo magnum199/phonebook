@@ -1,0 +1,21 @@
+.maintitle {
+    color: white;
+    text-align: center;
+    font-family:'Courier New', Courier, monospace ;
+    font-weight: bold;
+}
+.mymenu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+#footnote {
+    text-align: left;
+    margin-left: 20px;
+    margin-top: 350px;
+    color: white;
+    font-family:'Courier New', Courier, monospace ;
+    
+}
