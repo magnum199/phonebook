@@ -3,3 +3,10 @@
     align-content: center;
     margin-left: 500px;
 }
+.card-header {
+    text-align: center;
+}
+
+h6 {
+    text-decoration: underline;
+}
