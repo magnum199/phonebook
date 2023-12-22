@@ -19,8 +19,17 @@ const userSchema = new mongoose.Schema({
   password: {
     type: String,
     required: true 
-   }
-
+   },
+   contacts_list: [{
+    _name: {
+    type: String,
+    required: true
+  },
+    _phone: {
+    type: String,
+    required: true
+  }
+  }]
 
 });
 

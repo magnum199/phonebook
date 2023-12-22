@@ -1,0 +1,61 @@
+<h3 class="maintitle">ADD NEW CONTACT</h3>
+ <div class="form-group">
+  
+  <br>
+
+
+  <h4 style="margin-left: 10px;">Phone</h4>
+  <input class="form-control form-control-lg" [(ngModel)] = "phone" id="usern" type="text">
+
+  <h4 style="margin-left: 10px;">Name</h4>
+  <input class="form-control form-control-lg" [(ngModel)] = "contact_name" id="text11" type="text">
+
+  <button type="button" (click)="saveContact()" style="margin: 10px;" class="btn btn-success btn-lg">Save</button>
+  <br>
+
+
+  <table style="width:100%">
+    <tr>
+      <th>Names</th>
+      <th>Phone</th>
+      <th>Delete Contact</th>
+      
+
+
+    </tr>
+    <tr *ngFor = "let item of display_array">
+      <td><b>{{item._name}}</b></td>
+      <td>{{item.phone}}</td>
+      <td><button type="button" (click)="removeContact(item.phone)" style="margin: 10px;" class="btn btn-danger btn-lg">Delete</button></td>
+      
+    </tr>
+
+
+  </table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>

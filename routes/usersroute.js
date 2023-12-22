@@ -67,6 +67,10 @@ usersroute.post('', (req, res) => {
 });
 
 
+
+
+
+
 //delete a user
 usersroute.delete('/:phone', (req, res) => {
   User.deleteOne({phone: req.params.phone}).then(function (prof){

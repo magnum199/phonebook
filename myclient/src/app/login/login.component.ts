@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { LoginService } from '../login.service';
+import { ContactdataService } from '../contactdata.service';
 import { Router } from '@angular/router';
+import { response } from 'express';
 
 
 
@@ -11,7 +13,7 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent  {
 
-  constructor(private loginService: LoginService, private _router: Router){}
+  constructor(private contactdataService: ContactdataService, private loginService: LoginService, private _router: Router){}
 
  //sign in variables
   phone: any;
@@ -24,6 +26,8 @@ export class LoginComponent  {
       phone: this.phone,
       password: this.password
     }
+    //send user phone to loginservice
+    this.loginService.muserphone = this.phone;
     
     //send login data to service
     this.loginService.sendloginData(logD)
@@ -59,15 +63,30 @@ export class LoginComponent  {
 
   }
 
-  signUp(){
-
+  deleteAll(){
+    this.contactdataService.deleteAllusers()
+    .subscribe((response) => {
+      console.log(response);
+      
+    },
+    (error) => {
+      console.log(error);
+      
+    })
   }
 
 
 
-
   ngOnInit(){
-      //console.log('heloooo');
+      this.contactdataService.getAllusers()
+      .subscribe((response) => {
+        console.log(response);
+        
+      },
+      (error) => {
+        console.log(error);
+        
+      });
   }
 
 }

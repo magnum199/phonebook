@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const cors = require('cors');
+const User = require('./models/users');
 
 app.use(cors());
 
@@ -15,6 +16,9 @@ const mongoose = require('mongoose');
 const tokenRoute = require('./routes/tokenroute');
 const usersRoute = require('./routes/usersroute');
 const verifytokenRoute = require('./routes/verifytokenroute');
+const dataRoute = require('./routes/mycontactsroute');
+
+
 
 
 
@@ -67,17 +71,7 @@ process.on('SIGINT', async () => {
 app.use('/phonebook/login', tokenRoute);
 app.use('/phonebook/users', usersRoute);
 app.use('/phonebook/verifylogin', verifytokenRoute);
-
-
-
-
-
-
-
-
-
-
-
+app.use('/phonebook/users/mycontacts', dataRoute);
 
 
 

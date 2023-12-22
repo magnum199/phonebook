@@ -15,7 +15,15 @@ export class MenuComponent {
 constructor(private loginService: LoginService, private _router: Router){}
 
 
+gotoAddcontact(){
+  this._router.navigate(['/addcontact']);
+  
+}
 
+gotoEditcontacts(){
+  this._router.navigate(['/viewcontact']);
+  
+}
 
 
 
@@ -33,6 +41,7 @@ constructor(private loginService: LoginService, private _router: Router){}
     (error) => {
       //console.log(error.status);
       if(error.status == 200){
+        
         this._router.navigate(['/menu']);
       }
       else if(error.status == 401){//Unauthorized

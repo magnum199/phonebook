@@ -12,6 +12,7 @@ verifytokenroute.get('', (req, res) => {
     // Verify the token
 jwt.verify(token, 'masterkey', (err, decoded) => {
     if (decoded){
+        //console.log(decoded);
         
         User.findOne({phone: decoded.phone})
         .then(function (mdata){
